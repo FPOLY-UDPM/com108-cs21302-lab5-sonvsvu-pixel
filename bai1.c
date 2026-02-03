@@ -12,18 +12,38 @@
 
 #include <stdio.h>
 
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
+// Hàm tìm giá trị lớn nhất trong 3 số
+int timSoLonNhat(int so1, int so2, int so3) {
+    int max = so1;
+
+    if (so2 > max) {
+        max = so2;
+    }
+    if (so3 > max) {
+        max = so3;
+    }
+
+    return max;
+}
 
 int main() {
+    int a, b, c;
 
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    // Nhập 3 số
+    printf("Nhap so thu nhat: ");
+    scanf("%d", &a);
+
+    printf("Nhap so thu hai: ");
+    scanf("%d", &b);
+
+    printf("Nhap so thu ba: ");
+    scanf("%d", &c);
+
+    // Gọi hàm
+    int soMax = timSoLonNhat(a, b, c);
+
+    // Xuất kết quả
+    printf("So lon nhat trong 3 so la: %d\n", soMax);
+
     return 0;
 }
